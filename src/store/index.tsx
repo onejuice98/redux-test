@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterSlice from "./counterSlice";
+import loginSlice from "./loginSlice";
 
 // configureStore를 통해서 store 생성
 const store = configureStore({
   // 여러 slice를 모아주는 역할
   reducer: {
     counter: counterSlice.reducer,
+    login: loginSlice.reducer,
   },
 });
 

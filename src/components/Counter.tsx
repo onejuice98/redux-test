@@ -10,6 +10,11 @@ function Counter() {
   const count = useSelector((state: RootState) => {
     return state.counter.value;
   });
+
+  const nickName = useSelector((state: RootState) => {
+    return state.login.nickName;
+  });
+
   const addNumber = () => {
     // 구조분해 할당으로 up, down, init를 사용할 수 있다.
     dispatch(up(2));
@@ -26,6 +31,7 @@ function Counter() {
       <button onClick={addNumber}> + </button>
       <button onClick={minusNumber}> - </button>
       <button onClick={initNumber}> 초기화 </button>
+      {nickName && <h1> Hello {nickName}</h1>}
     </div>
   );
 }
