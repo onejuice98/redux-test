@@ -12,6 +12,11 @@ const initialState: InitialState = {
 
 // createSlice로 slice 생성
 // 객체를 인자로 받고 name, initialState, reducers 필수
+/**
+ * @param name 이름
+ * @param initialState 초기 상태
+ * @param reducers 메소드(함수)
+ */
 const counterSlice = createSlice({
   name: "counter",
   initialState,
